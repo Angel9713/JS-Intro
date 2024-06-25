@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr=[3,5,7,9];
+        for(let i=0;i<arr.length;i++){
+            document.write(arr[i] +"<br>");
+
+        }
+        for(let a of arr){
+            document.write(a +"<br>");
+        }
+        //print even numbers
+        let arr_r=[1,3,6,8,10];
+        for(let a of arr_r){
+            if(a%2==0)
+            document.write(a +"<br>");
+        }
+        //small number in an array
+            let small=arr_r[0];
+            for(let a of arr_r){
+            if(a<small){
+                small=a;
+            }
+        }
+            document.write(small);
+
+        //Array Methods
+        //push()
+        let names=["Elsy","Chelsy","Blessy","Jessy","Velsy"];
+
+        names.push("Eunice");//Elsy,Chelsy,Blessy,Jessy,Velsy,Eunice
+        names.pop();  //[Elsy,Chelsy,Blessy,Jessy,Velsy
+        names.shift(); //Chelsy,Blessy,Jessy,Velsy
+        names.unshift("Pricy"); //[Pricy,Elsy,Chelsy,Blessy,Jessy,Velsy
+        document.write(names +"<br>");
+
+
+        //splice()
+        names.splice(1,1); //Elsy,Chelsy,Blessy,Jessy,Velsy,Eunice
+        names.splice(5,1,"Pricy","Vincy");//Elsy,Chelsy,Blessy,Jessy,Velsy,Pricy,vincy
+        document.write(names +"<br>");
+
+        //slice()
+        let fav=names.slice(0,4);
+        document.write(fav +"<br>");//Elsy,Chelsy,Blessy,Jessy
+        //concat()
+        let nm=["Joy","joyce","joclyn"];
+        let as=names.concat(nm);
+        document.write(as +"<br>");//Elsy,Chelsy,Blessy,Jessy,Velsy,Joy,joyce,joclyn
+
+        //sort for strings
+        let an=names.sort();
+        document.write(an +"<br>");
+        let bs=names.sort().reverse();
+        document.write(bs +"<br>");//Blessy,Chelsy,Elsy,Jessy,Velsy
+        //sort of integers
+        let arr_ar=[40,16,19,32,6,7];
+        let  ai=arr_ar.sort(function(a,b){return a-b})
+        document.write(ai +"<br>");//6,7,16,19,32,40
+        document.write(ai.reverse() +"<br>");//40,32,19,16,7,6
+
+        //forEach()
+        arr_an = [15, 20, 22, 25, 30];
+        arr_an.forEach(multiply)
+        function multiply(a) {
+            document.write(a*2+"<br>");
+        }
+        //forEach arrow function
+        arr_an.forEach((a)=> {document.write(a*2 +"<br>")})
+       
+
+        //map()
+         arr_ap = [2,4,6,8,10];
+         arr1=arr_ap.map(add)
+        function add(a){
+            return a+1
+        }
+        document.write(arr1 +"<br>")
+        //map arrow function
+        arr_ap=arr1.map((a)=>a+1)
+        document.write(arr +"<br>")
+        let arr2=[1,3,4,6,8];
+        let arr3=arr2.map((a)=>{ if (a%2==0)return a})
+        document.write(arr3 +"<br>");
+
+    //filter()
+    let arr4=arr2.filter(even)
+    function even(a){
+        if(a%2==0)
+        return a
+    }
+    document.write(arr4 +"<br>")
+    //filter arrow function
+    arr4=arr2.filter((a)=>a%2==0)
+    document.write(arr4 +"<br>")
+
+    //findIndex()
+    let arr5=arr2.findIndex((a)=>a>6)
+    document.write(arr5 +"<br>")
+    //reduce()
+    let arr6=arr2.reduce((a,b)=>a+b)
+    document.write(arr6 +"<br>")
+    </script>
+
+</body>
+
+</html>

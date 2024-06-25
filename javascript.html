@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+<script>
+var x = parseInt(prompt("Enter first number"))
+var y = parseInt(prompt("Enter second number"))
+var z = parseInt(prompt("Enter third number"))
+
+if (x > y){
+   if (x > z) {
+     document.write(`${x} is greatest`);
+   }
+   else{
+     document.write('${z} is greatest');
+  }
+} 
+ else{
+    if(y>z){
+        document.write(`${y} is greatest`);
+    }
+    else{
+        document.write(`${z} is greatest`);
+    }
+}
+if (x < y) {
+  if (x < z) {
+    document.write(`${x} is smallest`);
+  }
+  else{
+    document.write(`${z} is smallest`);
+  }
+} 
+else{
+    if(y<z){
+        document.write(`${y} is smallest`);
+    }
+    else{
+        document.write(`${z} is smallest`);
+    }
+}
+var x=2024;
+var x=parseInt(prompt("Enter a year"))
+if(x%400==0){
+  if(x%100==0){
+    document.write(`${x}  leap year`);
+  }
+    else{
+    document.write(`${x} not leap year`);
+    }
+}
+else{
+  if(x%4==0){
+    document.write(`${x}  leap year`);
+  }
+  else{
+    document.write(`${x} not leap year`);
+  }
+}
+ 
+    </script>
+    
+</body>
+</html>

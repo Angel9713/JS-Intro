@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        x=parseInt(prompt("Enter a number"));
+        y=parseInt(prompt("Enter a number"));
+        operation=prompt("Enter operation-1:add/2:sub/3:multiply/4:division/5:Invalid");
+        if(operation=="1"){
+            add=(a,b)=>a+b
+            document.write(add(x,y));
+        }
+       else if(operation=="2"){
+            sub=(a,b)=>a-b
+            document.write(sub(x,y));
+        }
+        else if(operation=="3"){
+            multiply=(a,b)=>a*b
+            document.write(multiply(x,y));
+        }
+        else if(operation=="4"){
+            division=(a,b)=>a/b
+            document.write(division(x,y));
+        }
+        else{
+            document.write("Invallid");
+        }
+    </script>
+    
+</body>
+</html>
